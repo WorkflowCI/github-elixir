@@ -21,7 +21,7 @@ defmodule Github.Apps do
   """
   def create_access_token!(github_client, installation_id) do
     post!(
-      "https://api.github.com/installations/#{installation_id}/access_tokens",
+      "https://api.github.com/app/installations/#{installation_id}/access_tokens",
       [
         {"Authorization", "Bearer #{github_client.jwt_token}"},
         {"Accept", "application/vnd.github.machine-man-preview+json"}
